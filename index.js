@@ -14,8 +14,23 @@ app.use(express.json())
 app.use(express.urlencoded( {extended: true} ))
 
 // Routes (controllers)
+const usersController = require('./controllers/usersController')
+app.use('/api/users', usersController)
 
-// Listener for requests
+const reviewsController = require('./controllers/reviewsController')
+app.use('/api/reviews', reviewsController)
+
+const studySpotsController = require('./controllers/studySpotsController')
+app.use('/api/studySpots', studySpotsController)
+
+// ERROR HANDLING
+app.use((err, req, res, next) => {
+    const statusCode = res.statusCode || 500
+    const message = err.message || 'Internal Server Error'
+    res.status(statusCode).send(message)
+})
+
+// Listener for requests / start the server
 app.listen(app.get('port'), () => {
     console.log('on port: ' + app.get('port') + ' 🐧')
 })

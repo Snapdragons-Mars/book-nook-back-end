@@ -1,8 +1,32 @@
 const mongoose = require('mongoose')
+const ReviewSchema = require('./Review')
 
 // create the user schema 
 const UserSchema = new mongoose.Schema({
-
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    reviews: [ReviewSchema]
+}, 
+{
+    timestamps: true,
+    toJSON: {
+        virtuals: true,
+        // ret is the returned Mongoose document
+        transform: (_doc, ret) => {
+            delete ret.password;
+            return ret;
+        },
+    }
 })
 
 // instantiate the model and give it a name

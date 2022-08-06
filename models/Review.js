@@ -2,11 +2,43 @@ const mongoose = require('mongoose')
 
 // create the review schema 
 const ReviewSchema = new mongoose.Schema({
-
+    title: {
+        type: String,
+        required: true
+    },
+    comment:{
+        type: String,
+        required: true
+    },
+    noise_level_rating: {
+        type: Number,
+        required: true
+    },
+    outlets_rating: {
+        type: Number,
+        required: true
+    },
+    wifi_rating: {
+        type: Number,
+        required: true
+    },
+    aesthetic_rating: {
+        type: Number,
+        required: true
+    },
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    study_spot: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'StudySpot',
+    }
+},
+{
+    timestamps: true
 })
 
-// instantiate the model and give it a name
-const Review = mongoose.model('Review', ReviewSchema)
-
+// declaring subdocument, so NOT converting it to a model
 // export the model
-module.exports = Review
+module.exports = ReviewSchema

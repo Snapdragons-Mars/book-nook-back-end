@@ -1,9 +1,12 @@
+// Require dotenv to read env variables from a .env file
+require('dotenv').config();
+// Import Mongoose to interface with MongoDB
 const mongoose = require('mongoose')
 
 const mongoURI = process.env.DATABASE_URL
 const db = mongoose.connection
 
-// connect to mongoDB with mongoURI
+// Connect to mongoDB with mongoURI
 mongoose.connect(mongoURI)
 
 db.on('error', (err) => console.log(err.message))
