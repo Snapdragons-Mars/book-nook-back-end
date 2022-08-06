@@ -19,6 +19,8 @@ const UserSchema = new mongoose.Schema({
 }, 
 {
     timestamps: true,
+    // creating a virtual that will automatically remove password field any time toJSON method is used
+    // even though the field is deleted by the virtual, it remains safe in the database
     toJSON: {
         virtuals: true,
         // ret is the returned Mongoose document

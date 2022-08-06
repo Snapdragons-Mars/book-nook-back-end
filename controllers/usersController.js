@@ -14,8 +14,19 @@ router.get('/:userId', async (req, res, next) => {
     }
 })
 
-// POST one user 
-router.post('/', async (req, res, next) => {
+// POST one user (sign up)
+router.post('/signup', async (req, res, next) => {
+    try {
+        const newUser = await User.create(req.body)
+        res.status(201).json(newUser)
+    }
+    catch(err) {
+        next(err)
+    }
+})
+
+// POST one user (sign in)
+router.post('/signin', async (req, res, next) => {
     try {
         const newUser = await User.create(req.body)
         res.status(201).json(newUser)

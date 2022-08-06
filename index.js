@@ -13,6 +13,10 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded( {extended: true} ))
 
+// Log each request as it comes in for debugging
+const requestLogger = require('./middleware/request_logger');
+app.use(requestLogger);
+
 // Routes (controllers)
 const usersController = require('./controllers/usersController')
 app.use('/api/users', usersController)
@@ -24,11 +28,8 @@ const studySpotsController = require('./controllers/studySpotsController')
 app.use('/api/studySpots', studySpotsController)
 
 // ERROR HANDLING
-app.use((err, req, res, next) => {
-    const statusCode = res.statusCode || 500
-    const message = err.message || 'Internal Server Error'
-    res.status(statusCode).send(message)
-})
+const { handleErrors } = require('./middleware/custom_errors')
+app.use(handleErrors)
 
 // Listener for requests / start the server
 app.listen(app.get('port'), () => {
