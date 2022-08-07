@@ -15,8 +15,7 @@ const StudySpotSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    google_id: String,
-    reviews: [ReviewSchema]
+    google_id: String
 },
 {
     timestamps: true

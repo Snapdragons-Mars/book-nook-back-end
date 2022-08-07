@@ -14,8 +14,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    reviews: [ReviewSchema]
+    }
 }, 
 {
     timestamps: true,

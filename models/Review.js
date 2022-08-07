@@ -29,16 +29,20 @@ const ReviewSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
+        required: true
     },
     study_spot: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'StudySpot',
+        required: true
     }
 },
 {
     timestamps: true
 })
 
-// declaring subdocument, so NOT converting it to a model
+// instantiate the model and give it a name
+const Review = mongoose.model('Review', ReviewSchema)
+
 // export the model
-module.exports = ReviewSchema
+module.exports = Review
