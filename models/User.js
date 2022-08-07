@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const ReviewSchema = require('./Review')
 
 // create the user schema 
 const UserSchema = new mongoose.Schema({

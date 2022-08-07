@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 // Create a secret to be used to encrypt/decrypt the token
 // This can be any string value you want -- even gibberish.
 const secret =
-	process.env.JWT_SECRET || 'nooky';
+	process.env.JWT_SECRET || 'nooky8367456';
 
 // Require the specific `strategy` we'll use to authenticate
 // Require the method that will handle extracting the token

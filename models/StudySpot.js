@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const ReviewSchema = require('./Review')
 
 // create the study spot schema 
 const StudySpotSchema = new mongoose.Schema({

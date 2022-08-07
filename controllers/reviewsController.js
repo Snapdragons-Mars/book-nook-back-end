@@ -7,7 +7,7 @@ const { requireToken } = require('../middleware/auth')
 const Review = require('../models/Review')
 
 // Routes: API Endpoints Supported
-// GET all reviews for a study spot
+// GET all reviews for a study spot (read)
 router.get('/studySpot/:studySpotId', requireToken, async (req, res, next) => {
     try {
         const reviews = await Review.find({}).populate('owner')
@@ -19,7 +19,7 @@ router.get('/studySpot/:studySpotId', requireToken, async (req, res, next) => {
     }
 })
 
-// GET all reviews for a user 
+// GET all reviews for a user (read)
 router.get('/user/:userId', requireToken, async (req, res, next) => {
     try {
         const reviews = await Review.find({}).populate('study_spot')
@@ -31,7 +31,7 @@ router.get('/user/:userId', requireToken, async (req, res, next) => {
     }
 })
 
-// POST new review
+// POST new review (create)
 router.post('/', requireToken, async (req, res, next) => {
     try {
         const newReview = await Review.create(req.body)
@@ -42,7 +42,7 @@ router.post('/', requireToken, async (req, res, next) => {
     }
 })
 
-// PUT review
+// PUT review (update)
 router.put('/:reviewId', requireToken, async (req, res, next) => {
     try {
         const updatedReview = await Review.findByIdAndUpdate(req.params.reviewId, req.body, {new: true})
@@ -53,7 +53,7 @@ router.put('/:reviewId', requireToken, async (req, res, next) => {
     }
 })
 
-// DELETE review
+// DELETE review (delete)
 router.delete('/:reviewId', requireToken, async (req, res, next) => {
     try {
         const deletedReview = await Review.findByIdAndDelete(req.params.reviewId)

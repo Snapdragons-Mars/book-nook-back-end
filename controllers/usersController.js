@@ -43,6 +43,7 @@ router.post('/signup', async (req, res, next) => {
 })
 
 // POST one user (sign in)
+// generate a token for authentication
 router.post('/signin', async (req, res, next) => {
     try {
         const user = await User.findOne({ email: req.body.email })
