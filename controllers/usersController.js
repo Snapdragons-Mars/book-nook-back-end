@@ -39,6 +39,9 @@ router.post('/signup', async (req, res, next) => {
         const usernameCheck = await User.findOne({ username: req.body.username })
         if (usernameCheck) return res.status(400).send('Username already exists.')
 
+        // validation to check if password is atleast 8 characters long
+        if (req.body.password.length < 8) return res.status(400).send('Password must be atleast 8 characters long')
+
         // get the password, hash, then store the hashed password in the db only
         // 10 rounds of salt (standard)
         const password = await bcrypt.hash(req.body.password, 10)
