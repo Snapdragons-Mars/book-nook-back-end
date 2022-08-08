@@ -88,4 +88,4 @@ const createUserToken = (req, user) => {
 module.exports = {
 	requireToken,
 	createUserToken,
-};
+}

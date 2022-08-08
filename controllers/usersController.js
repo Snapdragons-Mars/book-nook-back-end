@@ -34,7 +34,7 @@ router.post('/signup', async (req, res, next) => {
         // get the password, hash, then store the hashed password in the db only
         // 10 rounds of salt (standard)
         const password = await bcrypt.hash(req.body.password, 10)
-        const newUser = await User.create({name: req.body.name, email: req.body.email, password, reviews: req.body.reviews})
+        const newUser = await User.create({name: req.body.name, email: req.body.email, password})
         res.status(201).json(newUser)
     }
     catch(err) {
