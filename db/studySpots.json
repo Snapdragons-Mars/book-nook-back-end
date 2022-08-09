@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Starbucks",
+        "location": "2.2 mi",
+        "overall_rating": "3.5"
+    },
+    {
+        "name": "Barnes and Noble",
+        "location": "3.1 mi",
+        "overall_rating": "5"
+    },
+    {
+        "name": "San Francisco Library",
+        "location": "5 mi",
+        "overall_rating": "3"
+    },
+    {
+        "name": "Cafe du Monde",
+        "location": "8 mi",
+        "overall_rating": "5"
+    },
+    {
+        "name": "Boba Boys",
+        "location": "10 mi",
+        "overall_rating": "4.3"
+    }
+]
