@@ -32,10 +32,14 @@ const ReviewSchema = new mongoose.Schema({
         required: true
     },
     study_spot: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'StudySpot',
+        type: String,
         required: true
     }
+    // study_spot: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'StudySpot',
+    //     required: true
+    // }
 },
 {
     timestamps: true

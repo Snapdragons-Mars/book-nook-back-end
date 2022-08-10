@@ -8,19 +8,19 @@ const Review = require('../models/Review')
 
 // Routes: API Endpoints Supported
 // GET all reviews for a study spot (read)
-router.get('/studySpot/:studySpotId', requireToken, async (req, res, next) => {
-    try {
-        const reviews = await Review.find({}).populate('owner')
-        const filteredReviewsArr = reviews.filter((review) => review.study_spot._id.toString() === req.params.studySpotId)
-        filteredReviewsArr.length !== 0 ? res.status(200).json(filteredReviewsArr) : res.sendStatus(404)
-    }
-    catch(err) {
-        next(err)
-    }
-})
+// router.get('/studySpot/:studySpotId', async (req, res, next) => {
+//     try {
+//         const reviews = await Review.find({}).populate('owner')
+//         const filteredReviewsArr = reviews.filter((review) => review.study_spot._id.toString() === req.params.studySpotId)
+//         filteredReviewsArr.length !== 0 ? res.status(200).json(filteredReviewsArr) : res.sendStatus(404)
+//     }
+//     catch(err) {
+//         next(err)
+//     }
+// })
 
 // GET all reviews for a user (read)
-router.get('/user/:userId', requireToken, async (req, res, next) => {
+router.get('/user/:userId', async (req, res, next) => {
     try {
         const reviews = await Review.find({}).populate('study_spot')
         const filteredReviewsArr = reviews.filter((review) => review.owner._id.toString() === req.params.userId)
@@ -32,7 +32,7 @@ router.get('/user/:userId', requireToken, async (req, res, next) => {
 })
 
 // POST new review (create)
-router.post('/', requireToken, async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         const newReview = await Review.create(req.body)
         res.status(201).json(newReview)
@@ -43,7 +43,7 @@ router.post('/', requireToken, async (req, res, next) => {
 })
 
 // PUT review (update)
-router.put('/:reviewId', requireToken, async (req, res, next) => {
+router.put('/:reviewId', async (req, res, next) => {
     try {
         const updatedReview = await Review.findByIdAndUpdate(req.params.reviewId, req.body, {new: true})
         updatedReview ? res.status(200).json(updatedReview) : res.sendStatus(404)
@@ -54,7 +54,7 @@ router.put('/:reviewId', requireToken, async (req, res, next) => {
 })
 
 // DELETE review (delete)
-router.delete('/:reviewId', requireToken, async (req, res, next) => {
+router.delete('/:reviewId', async (req, res, next) => {
     try {
         const deletedReview = await Review.findByIdAndDelete(req.params.reviewId)
         deletedReview ? res.sendStatus(204) : res.sendStatus(404)

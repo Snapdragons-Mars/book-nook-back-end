@@ -24,8 +24,8 @@ app.use('/api/users', usersController)
 const reviewsController = require('./controllers/reviewsController')
 app.use('/api/reviews', reviewsController)
 
-const studySpotsController = require('./controllers/studySpotsController')
-app.use('/api/studySpots', studySpotsController)
+// const studySpotsController = require('./controllers/studySpotsController')
+// app.use('/api/studySpots', studySpotsController)
 
 // ERROR HANDLING
 const { handleErrors } = require('./middleware/custom_errors')
