@@ -10,7 +10,7 @@ Project manager: Lance Chin
 - [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
 ## Entity Relationship Diagram
-(/erd/erd.png)
+![ERD](/erd/erd.png)
 
 ## Mobile Screenshots 📱 📸
 ![Home Page](/screenshots/1M.png)
