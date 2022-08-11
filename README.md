@@ -9,7 +9,7 @@ Project manager: Lance Chin
 - [Book Nook](https://book-nooks.netlify.app/) 
 
 ## Entity Relationship Diagram
-(/planning/erd/erd.png)
+(erd.png)
 
 ## Mobile Screenshots 📱 📸
 ![Home Page](/planning/screenshots/1M.png)
@@ -19,11 +19,11 @@ Project manager: Lance Chin
 ![Delete/Edit Reviews Page](/planning/screenshots/4M.png)
 
 ## Desktop Screenshots 🖥 📸
-![Home Page](/planning/screenshots/1D.png)
-![Reviews Page 1](/planning/screenshots/2D.png)
-![Reviews Page 2](/planning/screenshots/2DD.png)
-![Create Reviews Page](/planning/screenshots/3D.png)
-![Delete/Edit Reviews Page](/planning/screenshots/4D.png)
+![Home Page](/screenshots/1D.png)
+![Reviews Page 1](/screenshots/2D.png)
+![Reviews Page 2](/screenshots/2DD.png)
+![Create Reviews Page](/screenshots/3D.png)
+![Delete/Edit Reviews Page](/screenshots/4D.png)
 
 ## Technology and Tools 🛠
 <p align="left">
