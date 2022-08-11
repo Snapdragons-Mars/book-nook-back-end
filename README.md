@@ -7,16 +7,17 @@ Project manager: Lance Chin
 
 ## Check It Out 💡 
 - [Book Nook](https://book-nooks.netlify.app/) 
+- [Book Nook API](https://book-nooks-api.herokuapp.com/)
 
 ## Entity Relationship Diagram
-(erd.png)
+(/erd/erd.png)
 
 ## Mobile Screenshots 📱 📸
-![Home Page](/planning/screenshots/1M.png)
-![Reviews Page 1](/planning/screenshots/2M.png)
-![Reviews Page 2](/planning/screenshots/2MM.png)
-![Create Reviews Page](/planning/screenshots/3M.png)
-![Delete/Edit Reviews Page](/planning/screenshots/4M.png)
+![Home Page](/screenshots/1M.png)
+![Reviews Page 1](/screenshots/2M.png)
+![Reviews Page 2](/screenshots/2MM.png)
+![Create Reviews Page](/screenshots/3M.png)
+![Delete/Edit Reviews Page](/screenshots/4M.png)
 
 ## Desktop Screenshots 🖥 📸
 ![Home Page](/screenshots/1D.png)
