@@ -6,7 +6,7 @@ Project authors: Madison Aberer, Davis Brown, Lance Chin, and Felipe Ventura
 Project manager: Lance Chin
 
 ## Check It Out 💡 
-- [BookNook](deploy link) 
+- [Book Nook](https://book-nooks.netlify.app/) 
 
 ## Entity Relationship Diagram
 (pic)
