@@ -39,8 +39,42 @@ router.post('/signup', async (req, res, next) => {
         const usernameCheck = await User.findOne({ username: req.body.username })
         if (usernameCheck) return res.status(400).send('Username already exists.')
 
-        // validation to check if password is not empty and atleast 8 characters long
-        if (req.body.password.length === 0) return res.status(404).send('Set a password.')
+        // validation to check if username, email, and password are empty
+        if (req.body.username.length === 0 && req.body.email.length === 0 && req.body.password.length === 0) {
+            return res.status(404).send('Please enter a username, email, and password.')
+        }
+
+        // validation to check if username and email are empty
+        if (req.body.username.length === 0 && req.body.email.length === 0) {
+            return res.status(404).send('Please enter a username and email.')
+        }
+
+        // validation to check if username and password are empty
+        if (req.body.username.length === 0 && req.body.password.length === 0) {
+            return res.status(404).send('Please enter a username and password.')
+        }
+
+        // validation to check if email and password are empty
+        if (req.body.email.length === 0 && req.body.password.length === 0) {
+            return res.status(404).send('Please enter an email and password.')
+        }
+        
+        // validation to check if username is empty
+        if (req.body.username.length === 0) {
+            return res.status(404).send('Please enter a username.')
+        }
+
+        // validation to check if email is empty
+        if (req.body.email.length === 0) {
+            return res.status(404).send('Please enter an email.')
+        }
+
+        // validation to check if password is empty
+        if (req.body.password.length === 0) {
+            return res.status(404).send('Please enter a password.')
+        }
+
+        // validation to check if password is atleast 8 characters long
         if (req.body.password.length < 8) return res.status(400).send('Password must be atleast 8 characters long.')
 
         // get the password, hash, then store the hashed password in the db only
