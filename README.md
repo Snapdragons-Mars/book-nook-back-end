@@ -22,7 +22,7 @@ Project manager: Lance Chin
     </a>
     <a target="_blank" href="https://expressjs.com/"> <img src="https://assets.website-files.com/61ca3f775a79ec5f87fcf937/6202fcdee5ee8636a145a41b_1234.png" alt="Express Icon" height="40"/>
     </a> 
-    <a target="_blank" href="https://nodejs.org/en/" > <img src="https://w7.pngwing.com/pngs/1006/374/png-transparent-web-development-node-js-socket-io-javascript-network-socket-modernization-miscellaneous-logo-web-application.png" alt="Node Icon" height="40"/>
+    <a target="_blank" href="https://nodejs.org/en/" > <img src="https://spng.subpng.com/20190401/bu/kisspng-mongodb-document-oriented-database-nosql-openshift-web-app-development-servcie-in-dehradun-5ca1b8cb5ebec4.5292190415541024753881.jpg" alt="Node Icon" height="40"/>
     </a>
 </p>
 
