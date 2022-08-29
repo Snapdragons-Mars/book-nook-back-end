@@ -88,9 +88,9 @@ router.post('/signup', async (req, res, next) => {
     }
 })
 
-// POST one user (sign in)
+// POST one user (log in)
 // generate a token for authentication
-router.post('/signin', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
     try {
         const user = await User.findOne({ email: req.body.email })
         if (user) {
