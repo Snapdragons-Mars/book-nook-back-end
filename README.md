@@ -17,14 +17,9 @@ Project manager: Lance Chin
 ![Page 2](/screenshots/desktop/screenshot-d2.png)
 
 ## Technology and Tools 🛠
-<p align="left">
-    <a target="_blank" href="https://www.mongodb.com/cloud/atlas/lp/dcp?utm_content=rlsapostreg&utm_source=google&utm_campaign=gs_americas_uscan_search_brand_dsa_atlas_desktop_rlsa_postreg&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14383025495&adgroup=129270225314&gclid=Cj0KCQjwrs2XBhDjARIsAHVymmQzK47SyyYgIEaSX-QCD6At0wqdnFhu8yFe-AIkhVKdQN7TWPj2rJoaAsdJEALw_wcB"><img src="https://mpng.subpng.com/20190401/zsf/kisspng-mongodb-document-oriented-database-nosql-openshift-web-app-development-servcie-in-dehradun-5ca1b8cb8a0f32.3708278115541024755655.jpg" alt="MongoDB Icon" height="40"/>
-    </a>
-    <a target="_blank" href="https://expressjs.com/"> <img src="https://assets.website-files.com/61ca3f775a79ec5f87fcf937/6202fcdee5ee8636a145a41b_1234.png" alt="Express Icon" height="40"/>
-    </a> 
-    <a target="_blank" href="https://nodejs.org/en/" > <img src="https://spng.subpng.com/20190401/bu/kisspng-mongodb-document-oriented-database-nosql-openshift-web-app-development-servcie-in-dehradun-5ca1b8cb5ebec4.5292190415541024753881.jpg" alt="Node Icon" height="40"/>
-    </a>
-</p>
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## Installation Instructions and Contribution Guidelines 📲
 To view this project locally:
