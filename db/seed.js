@@ -1,6 +1,5 @@
 // establish connection to MongoDB
 const mongoose = require('./connection')
-// require the seed data (for the study spots to placehold for Google places)
 // const studySpots = require('./studySpots.json')
 
 const User = require('../models/User')
