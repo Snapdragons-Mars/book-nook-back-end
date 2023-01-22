@@ -27,6 +27,10 @@ app.use('/api/reviews', reviewsController)
 // const studySpotsController = require('./controllers/studySpotsController')
 // app.use('/api/studySpots', studySpotsController)
 
+app.use("/", (req, res) => {
+    res.send('Welcome to the Book Nook API page!')
+})
+
 // ERROR HANDLING
 const { handleErrors } = require('./middleware/custom_errors')
 app.use(handleErrors)
