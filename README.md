@@ -9,6 +9,10 @@ Project manager: Lance Chin
 - [Book Nook](https://book-nooks.netlify.app/) 
 - [Book Nook API]((https://book-nook-back-end-production.up.railway.app)
 
+- Demo the application by signing on with this information:
+    - Email address: sam@gmail.com
+    - Password: sam4thewin
+
 ## Mobile Screenshots 📱 📸
 ![Page 1](/screenshots/mobile/screenshot-m1.png)
 
